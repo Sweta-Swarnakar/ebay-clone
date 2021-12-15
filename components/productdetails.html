@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2bdb37b8af.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        #top{
+            display: flex;
+            
+        }
+
+        #topRight{
+            margin-left: 56%;
+            word-spacing: 20px;
+        }
+
+        .navbar{
+            width: 100%;
+            height: 80px;
+            border: 1px solid black;
+           
+            top: 0%;
+            display: flex;
+           
+        }
+
+        #imgDiv{
+            margin-left: 2%;
+           
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+      
+
+        .dropbtn, .dropBtn {
+        background-color: transparent;
+        
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      #icon{
+          padding: 8px;
+      }
+      .dropbtn:hover, .dropbtn:focus {
+        color: blue;
+      }
+      
+      .dropdown {
+        position: relative;
+        width: 220px;
+        margin-top: 10px;
+        padding: 1px;
+        border: 1px solid black;
+        display: inline-block;
+      }
+
+     
+      
+      .dropdown-content , .dropdownContent{
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 200px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 10px;
+      }
+      
+      .dropdown-content a, .dropdownContent a  {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown a:hover {background-color: #ddd;}
+      
+      .show {display: block;}
+#right{
+    
+    display: flex;
+   
+ }
+
+ #right > button{
+     margin-top: 16px;
+     width: 200px;
+     height: 44px;
+     border: 1px solid blue;
+     font-size: 18px;
+     background-color: white;
+     color: gray; 
+     margin-right: 300px;
+ }
+
+ #right > p {
+     color: gray;
+     margin-left: 0%;
+ }
+
+ #inputs{
+      
+      margin: auto;
+      
+    }
+      #inputs > i {
+
+            position: absolute;
+            display: inline-block;
+            color: gray;
+            
+        }
+          
+        #inputs > i
+        {
+          padding: 20px;
+        }
+        .icon {
+            padding: 10px;
+            min-width: 40px;
+        }
+          
+        .input-field {
+            width: 800px;
+            padding: 10px;
+            text-align:center;
+            font-size: 17px;
+            margin: 5px;
+        }
+
+        /* complete navbar */
+
+        #ad{
+            margin-top: 50px;
+            margin-left: 25%;
+        }
+
+        #bigBox{
+            margin-left: 5px;
+            width: 99%;
+           
+            display: grid;
+            grid-template-columns: 31% 46% 20%;
+            grid-gap: 5px;
+            
+
+        }
+
+        #bigBox > div{
+           
+        }
+        #leftTop{
+            border: 1px solid grey;
+        }
+
+        #leftTop > img{
+            
+            width: 450px;
+            
+            padding: 86px 0px; 
+        }
+
+        #leftBottom{
+            display: flex;
+        }    
+
+        #leftBottom > div{
+            
+           border: 1px solid grey;
+        }
+        h5{
+            color: red;
+        }
+
+        #middle{
+            padding: 10px;
+        }
+
+        #price{
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+        }
+
+        #buttons > div >  button{
+            width: 220px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: rgb(61, 61, 233);
+            font-size: 18px;
+            color: white;
+            margin: 5px;
+        }
+
+        #last{
+         
+            padding-left: 5px;
+            
+        }
+
+        #lastTop{
+            border: 1px solid grey;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        #imgDiv{
+            width: 98%;
+            padding-right: 5px;
+           
+        }
+        #imgDiv > img{
+            width: 270px;
+        }
+
+        #lastMiddle{
+            border: 1px solid grey;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        /* similar products */
+        
+           .mainpage2{
+			border:0px solid rgb(26, 55, 75);
+            width: 95%;
+			margin-left: 35px;
+			margin-right: 35px;
+			padding: 15px;
+			box-shadow: 1px 2px 2px 2px  rgb(202, 199, 199);
+			border-radius:6px;
+            margin-top: 10px;
+		 }
+
+.first{
+		display:flex;
+		width:100%;
+		height:20%;
+		
+	}
+	.first > div {
+		padding: 15px;
+
+	}
+	.img1{
+
+		width:60%;
+		height: 100%;
+        background-color: grey;
+	}
+	.img1{
+
+		width:100%;
+		height: 100%;
+	}
+	/* .add{
+			border:1px solid white;
+			height:36px;
+			width:55px;
+			margin: 5%;
+			text-align:center;
+			background-color:rgb(2, 123, 236);
+			border-radius: 18px;
+			color:white
+		}
+		.addclr{
+			color:white;
+			text-align: center;
+			margin-top: 8px;
+			font-size:15px;
+			font-family: 'Roboto', sans-serif;
+		} */
+
+	
+         .slide{
+			 margin:10% 10% 0% 15%
+		 }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="top">
+        
+            Hi! <a href="">Signin</a> or <a>register</a>
+             Daily Deals
+             Help & Contact
+            
+
+        
+        
+            <div id="topRight">Sell
+            Watchlist
+            My eBay
+            <i class="far fa-bell"></i>
+            <i class="fas fa-shopping-cart"></i>
+            </div>
+            
+    </div>
+    <hr>
+
+    <nav>
+        <div class = "navbar">
+		
+            <div id="imgDiv">
+              <a href="index.html"><img style="width: 160px; height: 50px;" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/2560px-EBay_logo.svg.png" /></a>
+            </div>
+             
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn" style="font-size: 12px;">Shop by category<i class="fas fa-angle-down" id="icon"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a>Stays</a>
+                    <a>Flights</a> 
+                    <a>Packages</a>
+                    <a>Cars</a> 
+                    <a>Cruises</a> 
+                    <a>Things to do</a> 
+                    <a>Deals</a>
+                    <a>Groups & meeting</a>
+                    <a>Travel Blog</a> 
+                </div>
+            </div>
+            
+            <div id="inputs">
+   
+                <i class="fas fa-search"></i>
+                  <input class="input-field" type="text" id="" placeholder="Search for anything">
+                  
+            </div>
+           
+            <div id="right">
+                <button>Search</button>
+            </div>    
+            
+           
+        </div>
+    
+
+    </nav>
+
+    <div id="ad">
+        <img src="https://tpc.googlesyndication.com/simgad/11680072544663657703" >
+    </div>
+
+     <!-- top box img + details -->
+    <div id="bigBox">
+
+        <div>
+            <div id="leftTop">
+                <img src="https://i.ebayimg.com/images/g/aVwAAOSwIIthkrt9/s-l500.jpg">
+            </div>
+            <div id="leftBottom">
+                <div>
+                    <img src="https://i.ebayimg.com/images/g/aVwAAOSwIIthkrt9/s-l64.jpg">
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/images/g/y0oAAOSwXThhkrt~/s-l64.jpg">
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/images/g/tfkAAOSw3nthkruB/s-l64.jpg">
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/images/g/LxAAAOSwdxZhkruD/s-l64.jpg">
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/images/g/vzQAAOSwUbNhkruE/s-l64.jpg">
+                </div>
+                <div>
+                    
+                <img src="https://i.ebayimg.com/images/g/EcIAAOSwvkdhkruG/s-l64.jpg">
+                </div>
+
+                <div>
+                    <img src="https://i.ebayimg.com/images/g/EcIAAOSwvkdhkruG/s-l64.jpg"> 
+                </div>
+                
+            </div>
+            
+        </div>
+        <div id="middle">
+            <h2>Dell Latitude 3330 Light Gaming, Student Laptop Windows10 Intel 8GB Ram 1TB HDMI</h2>
+            <h5><i class="fas fa-fire"></i>Popular Item 7 watched in last 24 hours</h5>
+            <hr>
+
+            <h4>Condition:Seller refurbished</h4>
+               <p>“Item is used and has been examined and tested and is in good working order. Might have minor dents ” ...<a href="">Read more</a> </p>
+
+               <div>
+               OS: <select>
+                        <option>--</option>
+                        <option>Windows 10</option>
+                   </select>
+                </div>   
+                
+                <div>
+                RAM: <select>
+                        <option>--</option>
+                        <option>4 GB</option>
+                     </select>
+
+                    </div>     
+                <div> 
+                
+                <div>   
+                    HDD: <select>
+                            <option>--</option>
+                            <option>1TB</option>
+                        </select>  
+                </div>
+                     
+                    quantity: <input type="number"> <p>More than 10 available
+                        32 sold / See feedback</p> 
+                        <hr>   
+                        
+                        <div id="price">
+                            <div>
+                                <span>Price:</span> <h2>US $140.24</h2>
+                                <p>US $186.98<i class="fas fa-exclamation-triangle"></i> Save 25%</p>
+                            </div>
+
+                            <div id="buttons">
+                                <div>
+                                   <button>Buy Now</button>
+                                </div>
+                                
+                                <div>
+                                     <button>Add to Cart</button>
+                                </div>
+
+                                <div>
+                                   <button><i class="far fa-heart"></i>Add to Wishlist</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                </div>
+                
+               
+                 
+        </div>
+        
+        
+        <div id="last">
+
+            <div id="lastTop">
+                <h4>Shop with confidence</h4>
+                eBay Money Back Guarantee
+                Get the item you ordered or get your money back.
+                <p>Learn more</p>
+            </div>
+
+            <div id="lastMiddle" >
+                <h4>Seller information</h4>
+                <p>jordan-techs (279<i class="fas fa-star"></i>)</p>
+                <p>97.4% Positive feedback</p>
+
+                <hr style="border: 1px dotted black"> 
+
+                <p><i class="far fa-heart"></i> Save this Seller</p>
+                <p>Contact seller</p>
+                <p>Visit store</p>
+                <p>See other items</p>
+            </div>
+
+            <div id="imgDiv">
+                <img src="https://media-exp1.licdn.com/dms/image/D5618AQF9mkHa5iqJnw/companyUpdate-article-image-offsite-ads_627_1200/0/1638449625461?e=1642636800&v=beta&t=eikx79sqZMZGnjoGPAM22bKQjYMJCvOOPQnXT2YrP_U">
+                <div>Growth takes flight at Maveric</div>
+            </div>
+           
+        </div>
+       
+
+
+
+    </div>
+
+    <div class ="mainpage2">
+        <div><h3  class ="build" style="margin-bottom: 0px;">Similar sponsored items</h3>
+        <div class = "first">
+            <div>
+                <div>
+                    <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/b62d59a5-d7c6-4e36-ba8f-774f0cbc5466_9.79edcdbc05fdea8fc2e56824f61a17c8.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                    
+                    <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html">
+                    <div>SAMSUNG CB4 11.6</div>
+                    <div>Pickup</div></a>
+                    <div class = "product"><h4>$127.00</h4></div>
+                    </div>
+            </div>
+            
+    
+    
+    
+            <div>
+                <div>
+                    <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/df249a64-b191-4a6d-a1b7-de9ebf129812_1.594fe5fdac4f5a262aa044b660a82754.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                   
+                    <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html">
+                    <div> Samsung XE303C12-A01US 11.6</div>
+                    <div>Pickup</div></a>
+                    <div class = "product"><h4>$89.99</h4></div>
+                    </div>
+    
+            </div>
+    
+    
+            <div>
+                <div>
+                    <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/3cf5c914-804a-430a-a9f3-4d271468a84b_1.08e66784d5248ee54937a1f30e167225.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                   
+                    <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html">
+                    <div>HP ChromeBook 11 G4 11.6</div>
+                    <div>Pickup</div></a>
+                    <div class = "product"><h4>$109.90</h4></div>
+                    </div>
+    
+            </div>
+            
+        
+            
+    
+                <div>
+                    <div>
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html"><img class = "img1" src = "https://i5.walmartimages.com/asr/6560d223-8da7-4c69-a3f5-00f9ec471e46_1.62d3280834e9b73e26893f2e76b80366.jpeg?odnHeight=300&odnWidth=300&odnBg=FFFFFF"/></a>
+                       
+                        </div>
+                        <a class="description" href="C:\Users\HP\Documents\GitHub\Walmart\madhurima\product_details.html">
+                        <div>HP 14 Laptop, Intel Celeron N4000</div>
+                        <div>Pickup</div></a>
+                        <div class = "product"><h4>$359.98</h4></div>
+                        </div>
+            </div>
+            
+        </div>
+                    
+    </div>
+    
+</body>
+</html>
