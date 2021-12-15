@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Open+Sans&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Payment.css">
+</head>
+
+
+<body>
+     <!-- Top-most div -->
+    <!-- <div class="headline">
+        <div class="title">
+            <h1>e</h1>
+            <h1>b</h1>
+            <h1>a</h1>
+            <h1>y</h1>
+        </div>
+        <h2>Checkout</h2>
+    </div> -->
+
+    <!-- 2nd div -->
+    <div class="SecDiv">
+        <p>Pay with a credit or debit card. It's simple and secure, and you can save it for a faster checkout next time</p>
+    </div>
+    <!-- 3rd div for payment and confirmation --> 
+    <div class="payWith">
+        <div class="payOptions">
+            <div>
+                <h3>Pay with</h3>
+            </div>
+            <hr>
+
+            <div class="newCard">
+                <input type="radio" id="newCard" name="payment" value="newCard" checked>
+                <label for="newCard">Add new card</label>
+            </div>
+            <hr>
+
+            <div class="PayPal">
+                <input type="radio" id="PayPal" name="payment" value="PayPal">
+                <img src="PayPal.png" alt="" height="18px" width: "25px">            
+            </div>
+            <hr>
+
+            <div class="PayPalCredit">
+                <input type="radio" id="gPay" name="payment" value="gPay">
+                <img src="paypalCredit.png" alt="" height="30px" width="70px">
+            </div>
+            <hr>
+
+            <div class="GooglePay">
+                <input type="radio" id="payPalCredit" name="payment" value="payPalCredit">
+                <img src="GooglePay.png" alt="" height="25px" width="45px">
+                <label for="payPalCredit">Google Pay</label>
+            </div>
+        </div>
+
+        <div class="confirmation">
+            <p>Subtotal</p>
+            <p>Shipping</p>
+            <hr>
+            <h4>Order total</h4>
+            <button>Confirm and pay</button>
+
+        </div>
+    </div>
+    
+    <!-- 4th div -->
+    <div class="ship">
+        <h4>Ship to</h4>
+        <p>
+            Full address with mobile no
+        </p>
+    </div>
+
+</body>
+</html>
