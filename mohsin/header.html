@@ -61,10 +61,26 @@
         </div>
 
         <div class="setCenter" id="main2">
-            <div><img src="https://cdn-icons-png.flaticon.com/512/888/888848.png" alt=""></div>
-            <div id="margin" class="setCenter lightBlack">Shop by<br>Category <span><select name=""
-                        id=""></select></span>
+            <div><img id="ebay" src="https://cdn-icons-png.flaticon.com/512/888/888848.png" alt=""></div>
+            <div>
+                <ul>
+                    <li>
+                       <div id="margin" class="setCenter z lightBlack">Shop by<br>Category <span><select name=""id=""></select></span></div>
+                        <ul>
+                            <li class="blockList2"><a href="#">Collectibles & art</a></li>
+                            <li class="blockList2"><a href="#">Home & garden</a></li>
+                            <li class="blockList2"><a href="#">Sporting goods</a></li>
+                            <li class="blockList2"><a href="#">Electronics</a></li>
+                            <li class="blockList2"><a href="#">Auto Parts & Accessories</a></li>
+                            <li class="blockList2"><a href="#">Toys & hobbies</a></li>
+                            <li class="blockList2"><a href="#">Fashion</a></li>
+                            <li class="blockList2"><a href="#">Musical instruments & gear</a></li>
+                            <li class="blockList2"><a href="#">Other Categories</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+
             <div class="height" id="center">
                 <div class="setCenter lightBlack"><i class="fas fa-search"></i></div>
                 <div><input type="text" placeholder=" Search for anything"></div>
@@ -113,8 +129,62 @@
                 <a class="lightBlack font13" href="#">Advanced</a>
             </div>
         </div>
+
+        <div id="headTag">
+            <div><a href="">Home</a></div>
+            <div><i class="fas fa-heart"></i><span> <a href="">Saved</a></span></div>
+            <div><a href="">Electronics</a></div>
+            <div><a href="">Fashion</a></div>
+            <div><a href="">Health & Beauty</a></div>
+            <div><a href="">Home & Garden</a></div>
+            <div><a href="">Sports</a></div>
+            <div><a href="">Collectibles and art</a></div>
+            <div><a href="">Industrial equipment</a></div>
+            <div><a href="">Motors</a></div>
+            <div><a href="">Deals</a></div>
+            <div><a href="">Sell</a></div>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://i.ebayimg.com/images/g/F6QAAOSwQcJfIpcl/s-l1600.webp" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://i.ebayimg.com/images/g/ZNwAAOSwcuJfIpcl/s-l1600.webp" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
     </div>
+    
 </body>
 
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
 <script src="https://kit.fontawesome.com/7d41c29fcc.js" crossorigin="anonymous"></script>
 </html>
