@@ -193,9 +193,7 @@ input {
 
 }
 
-#bigBox > div{
-   
-}
+
 #leftTop{
     border: 1px solid grey;
 }
