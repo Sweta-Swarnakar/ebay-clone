@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&family=Open+Sans&family=Varela+Round&display=swap");
+
+body {
+  font-family: "Varela Round", sans-serif;
+}
+
+#siginPage {
+  margin: auto;
+  width: 29%;
+}
+
+#upperBox {
+  border-radius: 10px;
+  border: 1px solid blue;
+  background-color: #f1f8fe;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+#upperBox > div {
+  padding: 20px;
+}
+
+#hello {
+  font-size: 40px;
+  margin-bottom: 35px;
+  margin-top: 40px;
+  color: rgba(0, 0, 0, 0.856);
+}
+
+.setCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underLine {
+  text-decoration: none;
+}
+
+#upperBox div a:hover {
+  text-decoration: underline;
+}
+
+#upperBox div i {
+  color: #3665f3;
+  font-size: 20px;
+  border: 0;
+}
+
+.marginAuto {
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.marginAuto p,
+h1 {
+  line-height: 0;
+}
+
+.marginAuto ~ input {
+  width: 98%;
+  height: 40px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.712);
+}
+
+.signinBtn {
+  height: 35px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  margin:15px 0 15px 0;
+  font-weight: bold;
+}
+
+#continue {
+  background-color: #3665f3;
+}
+
+#fb {
+  background-color: #4267b2;
+}
+
+#fb,
+#continue {
+  color: white;
+  border: none;
+}
+
+#google,
+#apple {
+  border: 1px solid rgba(0, 0, 0, 0.644);
+  color: rgba(0, 0, 0, 0.89);
+}
+
+#google i {
+  color: rgb(87, 0, 128);
+}
+
+#google:hover,
+#apple:hover {
+  background-color: lightgray;
+}
+
+#continue:hover,
+#fb:hover {
+  background-color: blue;
+}
+
+.marginAuto ~ div i {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.gridBtn {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.gridBtn i {
+  font-size: 30px;
+}
+
+#staySignin {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  font-size: 13px;
+}
+
+#hr {
+  margin: 40px 0 40px 0;
+}
+
+#endline {
+  font-size: 11px;
+  text-align: center;
+}
+
+#endline a {
+  color: rgba(0, 0, 0, 0.753);
+}
+
+#singinEbay {
+  width: 130px;
+  margin-top: 20px;
+}
+
+#setHr{
+  margin: 25px 0 25px 0;
+}
+
+#setHr hr {
+  width: 45%;
+  display: inline-block;
+}
+
+#hr1 {
+  text-align: left;
+  margin-left: 0;
+}
+
+#hr2 {
+  text-align: right;
+  margin-right: 0;
+}
+
+#or {
+  vertical-align: super;
+}
