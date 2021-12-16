@@ -64,7 +64,6 @@ h1 {
   width: 98%;
   height: 40px;
   outline: none;
-  margin-bottom: 15px;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.712);
 }
@@ -72,8 +71,8 @@ h1 {
 .signinBtn {
   height: 35px;
   padding: 8px 15px;
-  border-radius: 22px;
-  margin-bottom: 15px;
+  border-radius: 30px;
+  margin:15px 0 15px 0;
   font-weight: bold;
 }
 
@@ -133,16 +132,15 @@ h1 {
   width: 60%;
   margin: auto;
   text-align: center;
-  font-size:13px;
+  font-size: 13px;
 }
 
 #hr {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 40px 0 40px 0;
 }
 
 #endline {
-  font-size: 13px;
+  font-size: 11px;
   text-align: center;
 }
 
@@ -150,7 +148,30 @@ h1 {
   color: rgba(0, 0, 0, 0.753);
 }
 
-#singinEbay{
-  width:130px;
+#singinEbay {
+  width: 130px;
   margin-top: 20px;
+}
+
+#setHr{
+  margin: 25px 0 25px 0;
+}
+
+#setHr hr {
+  width: 45%;
+  display: inline-block;
+}
+
+#hr1 {
+  text-align: left;
+  margin-left: 0;
+}
+
+#hr2 {
+  text-align: right;
+  margin-right: 0;
+}
+
+#or {
+  vertical-align: super;
 }
