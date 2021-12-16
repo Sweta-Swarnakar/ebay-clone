@@ -1,0 +1,127 @@
+body{
+    text-align: center;
+}
+
+#top{
+    display: flex;
+}
+
+img{
+    width: 150px;
+    height: 60px;
+}
+
+#top :nth-child(2){
+    margin-left: 75%;
+
+}
+
+#main{
+    margin: auto;
+    width: 500px;
+    margin-top: 50px;
+}
+
+#checks{
+    display: flex;
+    padding: 40px;
+}
+
+#checks > div{
+    margin-right: 30px;
+}
+.checkbox-round {
+width: 1.3em;
+height: 1.3em;
+background-color: white;
+border-radius: 50%;
+vertical-align: middle;
+border: 1px solid #ddd;
+appearance: none;
+-webkit-appearance: none;
+outline: none;
+cursor: pointer;
+}
+
+
+
+/* input feilds */
+
+.smallInput{
+border-top: none;
+border-left: none;
+border-right: none;
+width: 200px;
+margin-right: 20px;
+margin-bottom: 10px;
+height: 40px;
+}
+
+input:focus{
+border: none;
+}
+.longInput{
+width: 350px;
+border-top: none;
+border-left: none;
+border-right: none;
+
+margin-right: 20px;
+margin-bottom: 10px;
+height: 40px;
+}
+
+button{
+width: 300px;
+height: 40px;
+font-size: 20px;
+color: grey;
+margin-top: 10px;
+}
+
+
+#toggle{
+    margin-left: -90px;
+   cursor: pointer;
+   width: 20px;
+   height: 16px;
+}
+
+a{
+    color: blue;
+    text-decoration: underline;
+}
+
+#upperBox {
+    width: 390px;
+    margin-left: 35%;
+    border-radius: 10px;
+    border: 1px solid blue;
+    background-color: #f1f8fe;
+    display: grid;
+    grid-template-columns: 10% 90%;
+  }
+  
+  #upperBox > div {
+    padding: 20px;
+  }
+
+  .setCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .underLine {
+    text-decoration: none;
+  }
+  
+  #upperBox div a:hover {
+    text-decoration: underline;
+  }
+  
+  #upperBox div i {
+    color: #3665f3;
+    font-size: 20px;
+    border: 0;
+  }
