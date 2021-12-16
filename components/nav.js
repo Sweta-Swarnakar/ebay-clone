@@ -3,7 +3,7 @@ function navbar()
     return `   <div id="header">
     <div id="main">
         <div>
-            <div>Hi! <span class="decoration"><a href="signin.html">Sign in</a></span> or <span class="decoration"><a href="signUp.html>register</a></span></div>
+            <div>Hi! <span class="decoration"><a href="signin.html">Sign in</a></span> or <span class="decoration"><a href="signUp.html">register</a></span></div>
             <div>Daily Deals</div>
             <div>Help & Contact</div>
         </div>
@@ -49,7 +49,10 @@ function navbar()
     </div>
 
     <div class="setCenter" id="main2">
-        <div><a href="index.html"><img id="ebay" src="https://cdn-icons-png.flaticon.com/512/888/888848.png" alt=""></a></div>
+        <div>
+        <a href="index.html"><img id="ebay" src="https://cdn-icons-png.flaticon.com/512/888/888848.png" alt="">
+        </a>
+        </div>
         <div>
             <ul>
                 <li>
