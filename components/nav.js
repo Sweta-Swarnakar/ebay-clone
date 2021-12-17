@@ -50,7 +50,7 @@ function navbar()
 
     <div class="setCenter" id="main2">
         <div>
-        <a href="index.html"><img id="ebay" src="https://cdn-icons-png.flaticon.com/512/888/888848.png" alt="">
+        <a href="index.html"><img id="ebay" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/2560px-EBay_logo.svg.png" alt="">
         </a>
         </div>
         <div>
