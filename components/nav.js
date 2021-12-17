@@ -135,9 +135,7 @@ function navbar()
         <div><a href="">Deals</a></div>
         <div><a href="">Sell</a></div>
     </div>
-</div>        
-
-`
+</div>`
 }
 
 export default navbar;
