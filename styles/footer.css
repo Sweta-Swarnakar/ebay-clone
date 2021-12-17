@@ -1,0 +1,81 @@
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        #Main {
+            display: grid;
+            grid-template-columns: repeat(5, 20%);
+            margin-top: 20px;
+            margin: 20px;
+        }
+        
+        
+        h3 {
+            margin-top: 40px;
+        }
+        
+        a,
+        i {
+            color: rgba(0, 0, 0, 0.623);
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .font13 {
+            font-size: 12px;
+        }
+        
+        #bottomMargin {
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 12px;
+        }
+        
+        #country {
+            display: flex;
+            width: 55%;
+            height: 30px;
+            background-color: #f5f5f5;
+            border: 1px solid rgba(0, 0, 0, 0.089);
+        }
+        
+        #us {
+            color: rgba(0, 0, 0, 0.623);
+            text-decoration: none;
+        }
+        
+        #us:hover {
+            text-decoration: underline;
+        }
+        
+        .SetCenter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 0 10px;
+        }
+        
+        #arrow {
+            margin-left: 10px;
+            color: rgba(0, 0, 0, 0.459);
+        }
+        
+        .decoration {
+            text-decoration: underline;
+        }
+        
+        #norton {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 4%;
+        }
+        
