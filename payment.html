@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Open+Sans&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/payment.css">
+    <style>
+      
+    </style>
 </head>
 
 
@@ -35,11 +38,13 @@
                 <h3>Pay with</h3>
             </div>
             <hr>
-
-            <div class="newCard">
-                <input type="radio" id="newCard" name="payment" value="newCard" checked>
-                <label for="newCard">Add new card</label>
+             
+            <div class="GooglePay">
+                <input type="radio" id="payPalCredit" name="payment" value="payPalCredit">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvmYMJ_uYvXnK3j0O9_lluoADHRUg8-8OZ5Vk-USE6cGwUA9ofznfIm5gu87OmiRR3dbg&usqp=CAU" alt="" height="25px" width="45px">
+                <label for="payPalCredit">Google Pay</label>
             </div>
+            
             <hr>
 
             <div class="PayPal">
@@ -54,10 +59,11 @@
             </div>
             <hr>
 
-            <div class="GooglePay">
-                <input type="radio" id="payPalCredit" name="payment" value="payPalCredit">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvmYMJ_uYvXnK3j0O9_lluoADHRUg8-8OZ5Vk-USE6cGwUA9ofznfIm5gu87OmiRR3dbg&usqp=CAU" alt="" height="25px" width="45px">
-                <label for="payPalCredit">Google Pay</label>
+           
+
+            <div class="newCard">
+                <input type="radio" id="newCard" name="payment" value="newCard">
+                <label for="newCard">Add new card</label>
             </div>
         </div>
 
@@ -66,18 +72,80 @@
             <p>Shipping</p>
             <hr>
             <h4>Order total</h4>
-            <button>Confirm and pay</button>
+            <button id="button">Confirm and pay</button>
 
         </div>
     </div>
+
+    <div  id="card">
+        <h1>Add card details</h1>
+        <div id="details">
+            <label> Card No:<span>*</span></label><br>
+            <input type = "text" id = "cardNo" disabled><br>
     
-    <!-- 4th div -->
-    <div class="ship">
-        <h4>Ship to</h4>
-        <p>
-            Full address with mobile no
-        </p>
+            <label for = ""> Card Type: <span>*</span></label><br>
+            <input type = "text" id = "type" disabled><br>
+            
+            <label for = ""> Expiry Month: <span>*</span></label><br>
+            <input type = "text" id = "date" disabled><br>
+            
+            <label for = ""> Expiry Year: <span>*</span></label><br>
+            <input type = "text" id = "year" disabled><br>
+            
+            <label for = ""> CVV: <span>*</span></label><br>
+            <input type = "text" id = "cvv" disabled><br>
+            
+            <label for = "">Cardholder Name: <span>*</span></label><br>
+            <input type = "text" id = "name" disabled><br>
+            
+            
+        </div>
+       
     </div>
+    
 
 </body>
 </html>
+<script>
+    document.getElementById("newCard").addEventListener("click", addDetails)
+
+    
+
+    function addDetails()
+    {
+        document.getElementById("cardNo").disabled = false;
+        document.getElementById("type").disabled = false;
+        document.getElementById("date").disabled = false;
+        document.getElementById("year").disabled = false;
+        document.getElementById("cvv").disabled = false;
+        document.getElementById("name").disabled = false;
+        
+        document.querySelector("#button").addEventListener("click", payment)
+        
+
+        function payment()
+    {
+       
+
+        var cardtype =  document.getElementById("type").value
+        var cardDate =  document.getElementById("date").value
+        var year = document.getElementById("year").value
+        var cvv = document.getElementById("cvv").value
+        var name = document.getElementById("name").value
+        var num = document.getElementById("cardNo").value
+       
+        if(cardtype && cardDate && year && cvv && name && num)
+        {
+            window.location.href = "otp.html";
+        }
+
+        else
+           window.alert("All fields are mandetory")
+        
+      
+
+    }
+
+
+    }
+</script>

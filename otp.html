@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/otp.css">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div id="load"></div>
+    <div id="main">
+        <h3>Enter 4 digit OTP sent to your Mobile</h3>
+        <input type="number" placeholder="enter" id="otp">
+        <br>
+        <button id="button">Proceed</button> 
+
+        
+    </div>
+</body>
+</html>
+
+<script>
+    var loading = document.getElementById("load")
+    document.getElementById("button").addEventListener("click", show)
+
+    
+    function show()
+    {
+        var inpt = document.getElementById("otp").value;
+        console.log(inpt)
+
+        if(inpt.length < 4 || inpt.length > 4)
+        {
+            window.alert("Otp did not match.")
+        }
+
+        else
+        {
+            var img = document.createElement("img")
+            img.src = "https://i.stack.imgur.com/kOnzy.gif";
+            let h4 = document.createElement("h4")
+            h4.textContent = "Please wait....."
+
+            loading.append(img, h4);
+
+
+            setTimeout(function(){
+               window.location.href = "thankYou.html";
+          }, 3000); 
+        }
+    }
+</script>
