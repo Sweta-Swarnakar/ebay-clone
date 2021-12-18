@@ -75,19 +75,26 @@
         
         let fstName = document.createElement("input");
         fstName.setAttribute("class", "smallInput");
-        fstName.placeholder = "First name";
+        fstName.placeholder = "Name";
         fstName.setAttribute("id", "fName");
         
        
         let lstName = document.createElement("input");
         lstName.setAttribute("class", "smallInput");
-        lstName.placeholder = "Last name";
+        lstName.placeholder = "email";
         lstName.setAttribute("id", "lName");
 
         let email = document.createElement("input")
         email.setAttribute("class", "longInput");
-        email.placeholder = "Email";
+        email.placeholder = "username";
         email.setAttribute("id", "email");
+
+        
+        let Mobile = document.createElement("input")
+        Mobile.setAttribute("class", "longInput");
+        Mobile.placeholder = "Mobile";
+        Mobile.setAttribute("id", "mobile");
+        
         
         let passDiv = document.createElement("div")
         let password = document.createElement("input")
@@ -130,19 +137,18 @@
         btn.addEventListener("click", async function Register(){
 
             let signup_data = {
-                fName : document.getElementById("fName").value,
+                name : document.getElementById("fName").value,
 
-                lName : document.getElementById("lName").value,
-
-                email : document.getElementById("email").value,
+                email : document.getElementById("lName").value,
 
                 password : document.getElementById("pass").value,
 
-                username: "",
+                username: document.getElementById("email").value,
 
-                mobile: "",
+                mobile: document.getElementById("mobile").value,
 
-                description: "",
+                description: "Description",
+                
             }
 
             signup_data = JSON.stringify(signup_data);
@@ -162,14 +168,15 @@
     
             let data = await res.json();
             console.log(data);
+
+            alert("Signup is successful!  Do you want to Login ?" );
             
         });
 
-       
 
-        mainDiv.append(fstName, lstName, email, passDiv, p, colorText, btn);
+
+        mainDiv.append(fstName, lstName, email, Mobile, passDiv, p, colorText, btn);
         container.append(mainDiv);
-
 
     }
 
