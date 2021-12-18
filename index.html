@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="">
 </head>
-
+<header id="navbar"></header>
 <body>
     <h1 class="page-header">Smart Watches</h1>
     <div class="main-container">
@@ -78,7 +79,7 @@
                             <a href="">
                                 <p>Demo Product</p>
                             </a>
-    
+
                         </div>
                     </div>
                     <div class="thumbnail">
@@ -167,9 +168,9 @@
             
             </div>
             <div class="slide-container">
-                <img id="slide-left" class="arrow"
+                <img id="slide-left-2" class="arrow"
                     src="https://www.pngfind.com/pngs/m/316-3161853_left-arrow-png-back-icon-app-png-transparent.png">
-                <section class="container" id="slider">
+                <section class="container" id="slider-2">
     
                     <div class="thumbnail">
                         <img src="https://i.ebayimg.com/thumbs/images/g/CTwAAOSw0GxgoJJn/s-l225.webp" alt="">
@@ -229,7 +230,7 @@
                     </div>
     
                 </section>
-                <img id="slide-right" class="arrow"
+                <img id="slide-right-2" class="arrow"
                     src="https://www.vhv.rs/dpng/d/613-6139653_page-right-arrow-arrow-icon-png-next-arrow.png">
             </div>
             <hr style="margin-top: 15px;margin-bottom: 15px;">
@@ -256,7 +257,11 @@
                     </div>
                     <div>View:</div>
                     <div>
-                        <i class="fab fa-microsoft"></i>
+                        <select id="sortByName" class="sort" onclick="handleNameSort()">
+                            <option value="">Sort by Name</option>
+                            <option value="asc">Assending Order</option>
+                            <option value="dsc">Desinding Order</option>
+                          </select><i class="fab fa-microsoft"></i>
                     </div> 
                 </div>
             </div>
@@ -288,18 +293,14 @@
                      
                  </div>
             </div>
-            <!-- <div class="advertisement">
-
-            </div>
             <hr style="margin-top: 15px;margin-bottom: 15px;">
-            <div>
-                 <div>
-                <img src="" alt="">
+            <div class="big-image">
+                <img src="https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/nk0AAOSwfRdZJXg7/$_57.JPG" alt="image">
             </div>
-            <div>
+            <div class="text-details">
                 <h2>Smart Watches: What You Need to Know</h2>
                 <p>Smart watches pair with your phone to put messaging and apps right on your wrist. They don't simply clone your phone, though. A smart watch might track your heart rate, measure the distance run, or compile other interesting metrics. Many brands have jumped into the smart watch category, with the Apple Watch perhaps the most popular option.</p>
-                <h1>What Can You Do With a Smart Watch?</h1>
+                <h2>What Can You Do With a Smart Watch?</h2>
                 <p>A smart watch connects to a smartphone via Bluetooth or Wi-Fi, making a wealth of features available. Here are some common uses for smart watches:</p>
                 <table>
                     <ul>
@@ -314,15 +315,15 @@
                         <li>Making purchases by waving your watch over a store’s credit card terminal</li>
                     </ul>
                 </table>
-                <h1>What to Consider When Shopping</h1>
+                <h2>What to Consider When Shopping</h2>
                 <p>There are several things to think about ahead of making a purchase. The watch should be attractive with a high-quality display and a user-friendly interface. The watch's operating system (most often Wear OS, Tizen, or watchOS) should be compatible with your phone. For example, some Samsung watches work with both Android and Apple phones. However, the Apple Watch will only pair with an iPhone. Other things to think about include battery life and price.</p>
-                <h1>Watch Face Shapes and Straps</h1>
+                <h2>Watch Face Shapes and Straps</h2>
                 <p>Although rectangular is the most common design, there are smart watches that have a circular display similar to traditional timepieces. Many models have changeable straps, so you can accessorize when going casual, sporty, or formal.</p>
-                <h1>Fitness Monitoring</h1>
+                <h2>Fitness Monitoring</h2>
                 <p>One major selling point of smart watches has been their ability to monitor things like heart rate and exercise. If you're interested in these features, choose a model that has a heart-rate sensor, pedometer, and accelerometer. Some watches report the amount of calories burned and even display a report of your performance at day’s end.</p>
-                <h1>Certified Refurbished Smart Watches</h1>
+                <h2>Certified Refurbished Smart Watches</h2>
                 <p>Buying a Certified Refurbished smart watch can be a great way to save on a high-quality device. These watches are guaranteed to arrive in like-new condition, along with any accessories, instruction manuals, and packaging. That means you enjoy off-the-shelf performance, often at a significant savings over buying new. Buyers get a 2-year warranty and have 30 days to return or exchange the watch from when it's delivered. Sellers are held to eBay's highest standards of customer service and are monitored to ensure they're hitting the relevant metrics. When it's time to get a smart watch and you're looking for a bargain, start your search with our Certified Refurbished products.</p>
-            </div> -->
+            </div> 
             </div>
            
         </div>
@@ -335,7 +336,13 @@
 </body>
 
 </html>
+<!-- <script type="module">
+    import navbar from "./components/nav.js";
+    console.log(navbar)
+    let navbar_container = document.getElementById('navbar');
+    navbar_container.innerHTML = navbar()
 
+</script> -->
 
 <!-- Apple Watch Series 6.44mm Space Gray Aluminum Case With Black Sport Band -->
 <!-- <html lang="en">

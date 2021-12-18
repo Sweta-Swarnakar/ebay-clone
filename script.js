@@ -26,7 +26,40 @@ buttonRight_1.addEventListener('click', function(){
   sizeSlider.scrollLeft += 200;
 });
 
+let limitedTime = document.getElementsByClassName('thumbnail');
+let DealSlider = document.getElementById('slider-2');
+
+let buttonRight_2 = document.getElementById('slide-right-2');
+let buttonLeft_2 = document.getElementById('slide-left-2');
+
+buttonLeft_2.addEventListener('click', function(){
+  DealSlider.scrollLeft -= 200;
+})
+
+buttonRight_2.addEventListener('click', function(){
+  DealSlider.scrollLeft += 200;
+});
+
+
 var Data //data coming from backend
+const API_URL = "http://127.0.0.1:5000/api/products";
+
+searchProducts(API_URL)
+
+    async function searchProducts(url) {
+     
+    try{
+     // api_key="861f5558aa5ac7cb419d45c40f0d4787"
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log(data);
+    showProducts(data);
+    
+    }catch(err){
+        console.log("err:", err)
+    }
+ 
+  }
 
 function handlePriceSort() {
     var selected = document.getElementById("sortByprice").value;
@@ -70,7 +103,40 @@ function handlePriceSort() {
    })
    showProducts(searchProd)
   }
+  
+var gridDivBox = document.querySelector("#grid-box");
+var mainDiv = document.createElement("div");
+mainDiv.setAttribute("id", "gridProduct");
+gridDivBox.append(mainDiv);
+showProducts(Data);
 
+function showProducts(Data) {
+  document.querySelector("#gridProduct").innerHTML = "";
+  Data.map(function (item) {
+    let imageDiv = document.createElement("div");
+    let img = document.createElement("img");
+    img.setAttribute("src", item.image_url);
+    let p7 = document.createElement("p");
+    p7.textContent = item.type;
+
+    let h2 = document.createElement("h2");
+    h2.textContent = `$ ${item.type}`;
+    
+    let h2_2 = document.createElement('h2');
+    h2.textContent =`$ ${item.price}`;
+
+    let after_discount = document.createElement('h2');
+    after_discount.textContent =`$ ${item.discount_price}`;
+
+    let offer = document.createElement(p);
+    offer.textContent = item.offer
+
+    
+    imageDiv.append(img, p7, h2,h2_2,after_discount,offer);
+
+    mainDiv.append(imageDiv);
+  });
+}
 
   function addToCart(item) {
     var prodInfo = JSON.parse(localStorage.getItem("ebay-product")) || [];

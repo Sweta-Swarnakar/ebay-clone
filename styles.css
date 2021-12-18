@@ -53,6 +53,10 @@ body {
     padding: 10px;
 }
 
+.right{
+    max-width: 80%;
+}
+
 .top-left > a > p{
     font-size: 13px;
     color: black;
@@ -100,6 +104,7 @@ img {
     max-width: 1100px;
     margin: 0 auto;
     /* padding: 0 20px; */
+    
 }
 
 
@@ -301,3 +306,40 @@ section .thumbnail:hover {
     height: 40px;
     border-radius: 10px;
 }
+.text-details{
+    padding: 5px;
+}
+.text-details>h2{
+    margin-bottom: 5px;
+    margin-top: 6px;
+    font-size: 20px;
+}
+.text-details>p{
+    font-size: 14px;
+}
+ul{
+    margin-left: 30px;
+}
+.big-image{
+   
+    width: 30%;
+    margin: auto;
+}
+
+#gridProduct {
+    width: 98%;
+    height: 150px;
+    display: grid;
+    grid-template-columns:300px 300px 300px;
+    grid-gap: 5%;
+    position: relative;
+    margin: auto;
+   
+    
+  }
+  #gridProduct > div{
+      margin-top: 10px;
+  }
+  #gridProduct > div > img {
+   width: 100%;
+  }
