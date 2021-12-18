@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +8,7 @@
 
 body {
     font-family: 'Market sans',Arial, sans-serif;
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
 }
 .page-header{
     margin-left: 120px;
@@ -280,12 +277,12 @@ section .thumbnail:hover {
 }
 .largee-box{
     width: 250px;
-    border: 1px solid red;
+   
     padding: 10px;
 }
 .image-box{
     width: 100%;
-    border: 1px solid blue;
+   
 }
 .textbox > p{
     font-size: 13px;
@@ -326,20 +323,20 @@ ul{
     margin: auto;
 }
 
-#gridProduct {
-    width: 98%;
-    height: 150px;
+.grid-box{
     display: grid;
-    grid-template-columns:300px 300px 300px;
-    grid-gap: 5%;
-    position: relative;
-    margin: auto;
+    grid-template-columns: repeat(4,24%) ;
+    gap:5px;
+    /* background-color:whitesmoke; */
+}
+.largee-box{
+    margin-left: 10px;
+    border: 1px solid red;
+}
+.textbox{
+    border: 1px solid red;
+}
+.image-box>img{
+    width: 100%;
    
-    
-  }
-  #gridProduct > div{
-      margin-top: 10px;
-  }
-  #gridProduct > div > img {
-   width: 100%;
-  }
+}

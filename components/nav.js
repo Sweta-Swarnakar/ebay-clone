@@ -41,13 +41,11 @@ function navbar()
                 </ul>
             </div>
             <div><i class="far fa-bell"></i></div>
-
             <div>
                 <i class="fas fa-shopping-cart"></i>
             </div>
         </div>
     </div>
-
     <div class="setCenter" id="main2">
         <div><img id="ebay" src="https://cdn-icons-png.flaticon.com/512/888/888848.png" alt=""></div>
         <div>
@@ -68,7 +66,6 @@ function navbar()
                 </li>
             </ul>
         </div>
-
         <div class="height" id="center">
             <div class="setCenter lightBlack"><i class="fas fa-search"></i></div>
             <div><input id="search" type="text" placeholder=" Search for anything"></div>
@@ -111,13 +108,11 @@ function navbar()
                     <option>Everything Else</option>
                 </select></div>
         </div>
-
         <div class="height"><button>Search</button></div>
         <div id="advance">
             <a class="lightBlack font13" href="#">Advanced</a>
         </div>
     </div>
-
     <div id="headTag">
         <div><a href="">Home</a></div>
         <div><i class="fas fa-heart"></i><span> <a href="">Saved</a></span></div>
@@ -133,7 +128,6 @@ function navbar()
         <div><a href="">Sell</a></div>
     </div>
 </div>        
-
 `
 }
 
