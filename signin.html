@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" href="./styles/signin.css">
+
+</head>
+
+<body>
+
+    <a href="index.html"><img id="singinEbay"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/2560px-EBay_logo.svg.png" alt=""></a>
+
+    <div id="siginPage">
+
+        <div id="upperBox">
+            <div class="setCenter"> <i class="fas fa-info-circle"></i></div>
+            <div>
+                To buy and sell on <span><a class="underLine" href="">www.ebay.com</a></span> or other eBay sites
+                internationally, existing users can login using
+                their credentials or new users can register an eBay account on ebay.in. Kindly note you can no
+                longer
+                buy or sell on eBay.in.
+            </div>
+        </div>
+        <div class="marginAuto">
+            <h1 id="hello">Hello</h1>
+            <p>Sign in to eBay or <span><a href="signUp.html">create an account</a></span></p>
+        </div>
+        <input type="text" id="username"  placeholder="Enter username">
+        <input type="password" id="password"  placeholder="Enter password">
+        <button onclick="login()" id="continue" class="signinBtn setCenter">Continue</button>
+         
+        <div id="setHr">
+            <hr id="hr1"><span id="or">or</span>
+            <hr id="hr2">
+        </div>
+
+        <div id="fb" class="gridBtn signinBtn">
+            <div class="setCenter"><i class="fab fa-facebook-square"></i></div>
+            <div class="setCenter">Continue with Facebook</div>
+        </div>
+        <div id="google" class="gridBtn signinBtn">
+            <div class="setCenter"><i class="fab fa-google"></i></div>
+            <div class="setCenter">Continue with Google</div>
+        </div>
+        <div id="apple" class="gridBtn signinBtn">
+            <div class="setCenter"><i class="fab fa-apple"></i></div>
+            <div class="setCenter">Continue with Apple</div>
+        </div>
+        <div id="staySignin">
+            <input type="checkbox"><label> Stay signed in<br>Using a public or shared device?<br>Uncheck to protect your
+                account.<br><a href="">Learn more</a></label>
+        </div>
+    </div>
+    <hr id="hr">
+    <div id="endline">
+        <p>Copyright © 1995-2021 eBay Inc. All Rights Reserved. <span><a href="">Accessibility</a></span>, <span>
+                <a href="">User Agreement</a>
+            </span>,<span><a href="">Privacy</a></span>, <span><a href="">Cookies</a></span>,
+            <span><a href="">Do not sell my personalinformation</a></span> and <span><a href="">AdChoice </a></span><i
+                class="fas fa-power-off"></i>
+        </p>
+        <img width="100px"
+            src="https://www.websecurity.digicert.com/content/dam/websitesecurity/icontextandtitle/Desktop/images/NortonSeal_PoweredbyDigiCert_80x40-02.png"
+            alt="">
+    </div>
+</body>
+
+</html>
+
+
+<script src="https://kit.fontawesome.com/7d41c29fcc.js" crossorigin="anonymous"></script>
+
+<script>
+    async function login(){
+
+        let loginData = {
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+        }
+
+        loginData = JSON.stringify(loginData);
+        console.log(loginData);
+
+        let api = `https://masai-api-mocker.herokuapp.com/auth/login`;
+        
+        let res = await fetch(api, {
+            method:"POST", 
+
+            body: loginData,
+            // more extra information about my request
+            headers: {
+                "Content-Type" : "application/json",
+            },
+        });
+
+        let data = await res.json();
+        console.log(data);
+        let username = document.getElementById("username").value;
+        getProfile(username, data.token);
+
+    }    
+
+    async function getProfile(uerName, token){
+
+        let urlApi =`https://masai-api-mocker.herokuapp.com/user/${uerName}`;
+
+        let response = await fetch(urlApi, {
+
+            // more extra information about my request
+            headers: {
+                "Content-Type" : "application/json",
+                'Authorization': `Bearer ${token}`,
+            },
+            
+        });
+
+        let data = await response.json();
+        console.log(data);
+    }
+
+</script>
