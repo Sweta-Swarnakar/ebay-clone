@@ -37,7 +37,7 @@
             <div class="deatils">
                 <h3>Shop by Brand</h3>
             <a href="/">
-                <h3>See All <i class="fa fa-arrow-right"></i></h3>
+                <h3> See All <i class="fa fa-arrow-right"></i></h3>
             </a>
             </div>
             <div class="slide-container">
@@ -107,7 +107,7 @@
             <div class="deatils-1">
                 <h3>Shop by Case Size</h3>
             <a href="/">
-                <h3>See All <i class="fa fa-arrow-right"></i></h3>
+                <h3 class="change_Color">See All <i class="fa fa-arrow-right"></i></h3>
             </a>
             </div>
             <div class="slide-container">
@@ -125,41 +125,41 @@
                     <div class="thumbnail">
                         <div class="product-size">
                             <a href="/">
-                                <p>44 <span> mm</span></p>
+                                <p>42 <span> mm</span></p>
                             </a>
                         </div>
                     </div>
                     <div class="thumbnail">
                         <div class="product-size">
                             <a href="/">
-                                <p>44 <span> mm</span></p>
+                                <p>40 <span> mm</span></p>
                             </a>
                         </div>
                     </div>
                     <div class="thumbnail">
                         <div class="product-size">
                             <a href="/">
-                                <p>44 <span> mm</span></p>
+                                <p>38 <span> mm</span></p>
                             </a>
                         </div>
                     </div>
                     <div class="thumbnail">
                         <div class="product-size">
                             <a href="/">
-                                <p>44 <span> mm</span></p>
+                                <p>36 <span> mm</span></p>
                             </a>
                         </div>
                     </div>
                     <div class="thumbnail">
                         <div class="product-size">
                             <a href="/">
-                                <p>44 <span> mm</span></p>
+                                <p>34 <span> mm</span></p>
                             </a>
                         </div>
                     </div>
     
                 </section>
-                <img id="slide-right" class="arrow"
+                <img id="slide-right-1" class="arrow"
                     src="https://www.vhv.rs/dpng/d/613-6139653_page-right-arrow-arrow-icon-png-next-arrow.png">
             </div>
             <div class="deatils-1">
@@ -242,10 +242,12 @@
                 <div class="right-detail">
                     <div>Sort:</div>
                     <div>
-                        <select id="best-select">
+                        <select id="sortByprice"class="sort" onclick="handlePriceSort()">
                             <option value="best">Best Match</option>
                             <option value="ending">Time:ending soonest</option>
                             <option value="listed">Time:newly listed</option>
+                            <option value="low">Low to High</option>
+                            <option value="high">High to Low</option>
                             <option value="lowest">Price+Shipping lowest</option>
                             <option value="highest">Price+Shipping highest first</option>
                             <option value="nearest">Distance:nearest first</option>
@@ -268,7 +270,7 @@
                 <div>Condition <i class="fa fa-angle-down"></i></div>
                 <div>Price <i class="fa fa-angle-down"></i></div>
                 <div>Buying Format <i class="fa fa-angle-down"></i></div>
-                <div>All Filters</div>
+                <div style="color: blue;text-decoration: underline;">All Filters</div>
             </div>
             <hr style="margin-top: 15px;margin-bottom: 15px;">
             <div class="grid-box">
@@ -285,6 +287,42 @@
                       </div>
                      
                  </div>
+            </div>
+            <!-- <div class="advertisement">
+
+            </div>
+            <hr style="margin-top: 15px;margin-bottom: 15px;">
+            <div>
+                 <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h2>Smart Watches: What You Need to Know</h2>
+                <p>Smart watches pair with your phone to put messaging and apps right on your wrist. They don't simply clone your phone, though. A smart watch might track your heart rate, measure the distance run, or compile other interesting metrics. Many brands have jumped into the smart watch category, with the Apple Watch perhaps the most popular option.</p>
+                <h1>What Can You Do With a Smart Watch?</h1>
+                <p>A smart watch connects to a smartphone via Bluetooth or Wi-Fi, making a wealth of features available. Here are some common uses for smart watches:</p>
+                <table>
+                    <ul>
+                        <li>Using GPS to get directions or to monitor the calories you consume while walking or riding a bike</li>
+                        <li>Playing music using Bluetooth headphones</li>
+                        <li>Making and receiving phone calls</li>
+                        <li>Reading and responding to text messages</li>
+                        <li>Getting news, sports scores, and weather updates</li>
+                        <li>Making reservations</li>
+                        <li>Syncing with your smartphone schedule to display your daily agenda</li>
+                        <li>Checking social media statuses and notifications</li>
+                        <li>Making purchases by waving your watch over a store’s credit card terminal</li>
+                    </ul>
+                </table>
+                <h1>What to Consider When Shopping</h1>
+                <p>There are several things to think about ahead of making a purchase. The watch should be attractive with a high-quality display and a user-friendly interface. The watch's operating system (most often Wear OS, Tizen, or watchOS) should be compatible with your phone. For example, some Samsung watches work with both Android and Apple phones. However, the Apple Watch will only pair with an iPhone. Other things to think about include battery life and price.</p>
+                <h1>Watch Face Shapes and Straps</h1>
+                <p>Although rectangular is the most common design, there are smart watches that have a circular display similar to traditional timepieces. Many models have changeable straps, so you can accessorize when going casual, sporty, or formal.</p>
+                <h1>Fitness Monitoring</h1>
+                <p>One major selling point of smart watches has been their ability to monitor things like heart rate and exercise. If you're interested in these features, choose a model that has a heart-rate sensor, pedometer, and accelerometer. Some watches report the amount of calories burned and even display a report of your performance at day’s end.</p>
+                <h1>Certified Refurbished Smart Watches</h1>
+                <p>Buying a Certified Refurbished smart watch can be a great way to save on a high-quality device. These watches are guaranteed to arrive in like-new condition, along with any accessories, instruction manuals, and packaging. That means you enjoy off-the-shelf performance, often at a significant savings over buying new. Buyers get a 2-year warranty and have 30 days to return or exchange the watch from when it's delivered. Sellers are held to eBay's highest standards of customer service and are monitored to ensure they're hitting the relevant metrics. When it's time to get a smart watch and you're looking for a bargain, start your search with our Certified Refurbished products.</p>
+            </div> -->
             </div>
            
         </div>
