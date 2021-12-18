@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&family=Open+Sans&family=Varela+Round&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+#main {
+  display: flex;
+  font-size: 13px;
+  margin: 0 5% 0 5%;
+}
+
+#main > div {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  gap: 30px;
+}
+
+#main2 {
+  padding: 0 5% 0 5%;
+  display: grid;
+  grid-template-columns: 11% 8% 62% 12% 5%;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.342);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.342);
+}
+
+.setCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decoration {
+  color: blue;
+  text-decoration: underline;
+}
+
+#right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 6px 0 5px 0;
+  display: inline-block;
+}
+
+ul li:hover {
+  background: #fff;
+}
+
+ul li:hover ul {
+  background: #fff;
+  display: block;
+}
+
+ul li ul {
+  position: absolute;
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.062);
+}
+
+.blockList {
+  background: #fff;
+  width: 150px;
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.blockList2 {
+  background: #fff;
+  width: 200px;
+  display: block;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.blockList2 > a {
+  color: rgba(0, 0, 0, 0.781);
+}
+
+ul li ul li:hover {
+  text-decoration: underline;
+}
+
+i {
+  font-size: 18px;
+}
+
+#ebay {
+  width: 130px;
+  margin-top: 5px;
+  
+}
+
+
+button {
+  width: 100%;
+  height: 100%;
+  background-color: #3665f3;
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+#search {
+  width: 99.2%;
+  height: 38px;
+  outline: none;
+  font-size: 18px;
+}
+
+.height {
+  height: 40px;
+}
+
+#margin {
+  margin-left: 5px;
+}
+
+#center {
+  display: grid;
+  grid-template-columns: 6% 72% 22%;
+  border: 2px solid black;
+}
+
+.lightBlack {
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.font13 {
+  font-size: 13px;
+}
+
+.selectStyle {
+  padding: 11px;
+  width: 80%;
+  outline: none;
+  border-left: 1px solid rgba(0, 0, 0, 0.295);
+}
+
+#watching {
+  margin-left: -370px;
+  margin-top: 0;
+  padding: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.527);
+}
+
+#advance {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#advance > a:hover {
+  color: blue;
+}
+
+/* select,
+button,
+input {
+  border: 0;
+} */
+
+#headTag {
+  display: grid;
+  grid-template-columns: 4% 6% 6% 6% 9% 9% 4% 10% 11% 5% 4% 3%;
+  justify-content: center;
+}
+
+#headTag > div {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#headTag a {
+  color: rgba(0, 0, 0, 0.719);
+}
+
+#headTag i {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.514);
+  margin-right: 3px;
+}
+
+#headTag a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next {
+    font-size: 11px;
+  }
+}
+
+
+
+button,
+input {
+    border: 0;
+}
+
+.borderRemove {
+    border: 0;
+}
