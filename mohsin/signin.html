@@ -31,8 +31,9 @@
             <h1 id="hello">Hello</h1>
             <p>Sign in to eBay or <span><a href="signUp.html">create an account</a></span></p>
         </div>
-        <input type="text" id="username"  placeholder="  Email or Username">
-        <button onclick="Login()" id="continue" class="signinBtn setCenter">Continue</button>
+        <input type="text" id="username"  placeholder="Enter username">
+        <input type="password" id="password"  placeholder="Enter password">
+        <button onclick="login()" id="continue" class="signinBtn setCenter">Continue</button>
          
         <div id="setHr">
             <hr id="hr1"><span id="or">or</span>
@@ -73,13 +74,14 @@
 </html>
 
 
-<script src="https://kit.fontawesome.com/7d41c29fcc.js" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/7d41c29fcc.js" crossorigin="anonymous"></script>
 
-    async function Login(){
+<script>
+    async function login(){
 
         let loginData = {
             username: document.getElementById("username").value,
-            password: "",
+            password: document.getElementById("password").value,
         }
 
         loginData = JSON.stringify(loginData);
@@ -98,7 +100,7 @@
         });
 
         let data = await res.json();
-        console.log(data)
+        console.log(data);
         let username = document.getElementById("username").value;
         getProfile(username, data.token);
 
@@ -122,6 +124,5 @@
         console.log(data);
 
     }
-
 
 </script>

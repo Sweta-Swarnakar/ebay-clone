@@ -61,11 +61,16 @@ h1 {
 }
 
 .marginAuto ~ input {
-  width: 98%;
+  width: 95%;
   height: 40px;
   outline: none;
-  border-radius: 8px;
+  border-radius: 30px;
+  margin-bottom: 8px;
+  padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.712);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .signinBtn {
