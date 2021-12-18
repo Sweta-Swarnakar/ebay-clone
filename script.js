@@ -39,7 +39,7 @@ buttonLeft_2.addEventListener("click", function () {
 buttonRight_2.addEventListener("click", function () {
   DealSlider.scrollLeft += 200;
 });
-
+var Data;
 //data coming from backend;
 
 const API_URL = "http://127.0.0.1:5000/api/products/";
@@ -50,7 +50,7 @@ async function searchProducts(url) {
   try {
     // api_key="861f5558aa5ac7cb419d45c40f0d4787"
     let response = await fetch(url);
-    let Data = await response.json();
+     Data = await response.json();
     console.log(Data);
     showProducts(Data);
   } catch (err) {
@@ -58,54 +58,56 @@ async function searchProducts(url) {
   }
 }
 
-function handlePriceSort(Data) {
+function handlePriceSort() {
   var selected = document.getElementById("sortByprice").value;
-  //console.log(selected);
+  //console.log(Data);
+  Data.forEach(ele=>ele.price = Number(ele.price))
+
   if (selected === "low") {
-    Data = Data.sort(function (a, b) {
-      return a.MRP - b.MRP;
+      Data.sort(function (a, b) {
+      return (a.price) -(b.price);
     });
   }
   if (selected === "high") {
-    Data = Data.sort(function (a, b) {
-      return b.MRP - a.MRP;
+    Data.sort(function (a, b) {
+      return (b.price) - (a.price);
     });
   }
-  console.log(Data);
-  showProducts(Data);
+  //console.log(Data);
+  showProducts();
 }
 function handleNameSort() {
   var selected = document.getElementById("sortByName").value;
   //console.log(selected);
   if (selected === "asc") {
-    Data = Data.sort(function (a, b) {
-      return a.type > b.type ? 1 : b.type > a.type ? -1 : 0;
+    Data.sort(function (a, b) {
+      return a.title > b.title ? 1 : b.title > a.title ? -1 : 0;
     });
   }
   if (selected === "dsc") {
-    Data = Data.sort(function (a, b) {
-      return a.type > b.type ? -1 : b.type > a.type ? 1 : 0;
+    Data.sort(function (a, b) {
+      return a.title > b.title ? -1 : b.title > a.title ? 1 : 0;
     });
   }
   console.log(Data);
-  showProducts(Data);
+  showProducts();
 }
 //var output = product.filter(searchByName);
 
-// var search = document.getElementById("search"); //add id of search-bar
-// search.addEventListener("input", searchByName);
-// function searchByName(el) {
-//   var searchProd = Data.filter(function (item) {
-//     return item.type.includes(search.value);
-//   });
-//   showProducts(searchProd);
-// }
+var search = document.getElementById("search"); //add id of search-bar
+search.addEventListener("input", searchByName);
+function searchByName(el) {
+  var searchProd = Data.filter(function (item) {
+    return item.type.includes(search.value);
+  });
+  showProducts(searchProd);
+}
 
 //showProducts(Data);
 
 var gridBox = document.querySelector(".grid-box");
-function showProducts(data) {
-  for (let i = 0; i < data.length; i++) {
+function showProducts() {
+  for (let i = 0; i < Data.length; i++) {
     let largeBox = document.createElement("div");
     largeBox.setAttribute("class", "largee-box");
     gridBox.append(largeBox);
@@ -115,7 +117,7 @@ function showProducts(data) {
     largeBox.append(imageBox);
 
     var img = document.createElement("img");
-    img.setAttribute("src", data[i].imageUrl);
+    img.setAttribute("src", Data[i].imageUrl);
     largeBox.append(img);
 
     let textBox = document.createElement("div");
@@ -127,25 +129,25 @@ function showProducts(data) {
     textBox.append(p);
 
     let strong = document.createElement("strong");
-    strong.textContent = data[i].title;
+    strong.textContent = Data[i].title;
     textBox.append(strong);
 
     let h4 = document.createElement("h2");
     h4.style.fontStyle = "italic";
-    h4.textContent = "INR RS " + data[i].price;
+    h4.textContent = "INR RS " + Data[i].price;
     textBox.append(h4);
 
     let p1 = document.createElement("p");
-    p1.textContent = `color : ${data[i].color}`;
+    p1.textContent = `color : ${Data[i].color}`;
     textBox.append(p1);
 
     let p2 = document.createElement("p");
-    if (Math.floor(data[i].rating.rate) < 6) {
+    if (Math.floor(Data[i].rating.rate) < 6) {
       p2.style.color = "red";
     } else {
       p2.style.color = "green";
     }
-    p2.textContent = `Rating : ${data[i].rating.rate} date : ${data[i].date}`;
+    p2.textContent = `Rating : ${Data[i].rating.rate} date : ${Data[i].date}`;
     textBox.append(p2);
   }
 }
@@ -170,8 +172,8 @@ function addToCart(item) {
 
 //   async function allProducts(){
 //     let res = await fetch(`http://127.0.0.1:5000/api/products/`);
-//     let data = await res.json()
-//     console.log(data);
+//     let Data = await res.json()
+//     console.log(Data);
 //     showDeta(data)
 
 // }
