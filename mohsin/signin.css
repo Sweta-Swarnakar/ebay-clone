@@ -76,8 +76,16 @@ h1 {
   font-weight: bold;
 }
 
+
 #continue {
   background-color: #3665f3;
+  height: 50px;
+  width: 385px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  margin:15px 0 15px 0;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 #fb {
