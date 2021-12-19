@@ -101,6 +101,10 @@
 
         let data = await res.json();
         console.log(data);
+    
+        window.alert("log in sucessful!")
+        Window.location.href = "index.html";
+
         let username = document.getElementById("username").value;
         getProfile(username, data.token);
 
