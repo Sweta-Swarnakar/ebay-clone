@@ -48,29 +48,30 @@ searchProducts(API_URL);
 
 async function searchProducts(url) {
   try {
-
     let response = await fetch(url);
-     Data = await response.json();
-    console.log(Data);
+    Data = await response.json();
+    //console.log(Data);
     showProducts(Data);
   } catch (err) {
     console.log("err:", err);
   }
 }
 
+
+
 function handlePriceSort() {
   var selected = document.getElementById("sortByprice").value;
   console.log(Data);
-  Data.forEach(ele=>ele.price = Number(ele.price))
+  Data.forEach((ele) => (ele.price = Number(ele.price)));
 
   if (selected === "low") {
-      Data.sort(function (a, b) {
-      return (a.price) -(b.price);
+    Data.sort(function (a, b) {
+      return a.price - b.price;
     });
   }
   if (selected === "high") {
     Data.sort(function (a, b) {
-      return (b.price) - (a.price);
+      return b.price - a.price;
     });
   }
   //console.log(Data);
@@ -107,9 +108,8 @@ function handleNameSort() {
 
 var gridBox = document.querySelector(".grid-box");
 function showProducts() {
-  gridBox.innerHTML ="";
+  gridBox.innerHTML = "";
   for (let i = 0; i < Data.length; i++) {
-
     let largeBox = document.createElement("div");
     largeBox.setAttribute("class", "largee-box");
     gridBox.append(largeBox);
@@ -117,6 +117,11 @@ function showProducts() {
     let imageBox = document.createElement("div");
     imageBox.setAttribute("class", "image-box");
     largeBox.append(imageBox);
+
+    largeBox.addEventListener('click',function toCart(){
+      localStorage.setItem('cartCheckOut',JSON.stringify(Data[i]));
+      window.location.href='productDetails.html';
+    })
 
     var img = document.createElement("img");
     img.setAttribute("src", Data[i].imageUrl);
@@ -154,28 +159,53 @@ function showProducts() {
   }
 }
 
-function addToCart(item) {
-  var prodInfo = JSON.parse(localStorage.getItem("ebay-product")) || [];
-  var isFound = false;
-  prodInfo.forEach((element) => {
-    if (element.id == item.id) {
-      isFound = true;
-    }
-  });
-  if (!isFound) {
-    item.quantity = 1;
-    prodInfo.push(item);
-    alert(item.type + " added to cart");
-    localStorage.setItem("ebay-product", JSON.stringify(prodInfo));
+// function addToCart(item) {
+//   var prodInfo = JSON.parse(localStorage.getItem("ebay-product")) || [];
+//   var isFound = false;
+//   prodInfo.forEach((element) => {
+//     if (element.id == item.id) {
+//       isFound = true;
+//     }
+//   });
+//   if (!isFound) {
+//     item.quantity = 1;
+//     prodInfo.push(item);
+//     alert(item.type + " added to cart");
+//     localStorage.setItem("ebay-product", JSON.stringify(prodInfo));
+//   } else {
+//     alert("This item is already present in your cart");
+//   }
+// }
+
+// By search in navbar by product name or color name
+
+const SEARCH_API ='http://127.0.0.1:5000/api/products/'
+
+let search_div = document.getElementById("grid-item"); 
+let btn = document.querySelector('#btn-search');
+btn.addEventListener('click', searchByProductName)
+
+//searchByProductName(SEARCH_API);
+
+async function searchByProductName() {
+
+  let searchTerm = document.getElementById("search").target.value ;
+
+
+  if(searchTerm && searchTerm !== "") {
+   try{
+ 
+     let res = await fetch(url);
+      Data = await res.json();
+     console.log(Data);
+     // searchProducts()
+     
+     }catch(err){
+       console.log("err:", err)
+     }
+ 
+   search.value = ''
   } else {
-    alert("This item is already present in your cart");
+   window.location.reload()
   }
 }
-
-//   async function allProducts(){
-//     let res = await fetch(`http://127.0.0.1:5000/api/products/`);
-//     let Data = await res.json()
-//     console.log(Data);
-//     showDeta(data)
-
-// }

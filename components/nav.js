@@ -108,7 +108,7 @@ function navbar()
                     <option>Everything Else</option>
                 </select></div>
         </div>
-        <div class="height"><button>Search</button></div>
+        <div class="height"><button id="btn-search">Search</button></div>
         <div id="advance">
             <a class="lightBlack font13" href="#">Advanced</a>
         </div>
