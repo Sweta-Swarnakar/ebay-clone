@@ -1,0 +1,88 @@
+
+/*=========================== cart main container ===========================*/
+.cartContainer{
+    /* border: .1px solid red; */
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+    gap: 1%;
+}
+.cartBox{
+    /* border:1px solid lightgrey; */
+    background-color: white;
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+    /* border-radius: 2px; */
+}
+.HeadindCount{
+    margin-left: 5%;
+}
+/*========================== right cart subtotal box====================== */
+.cartBox2{
+    width: 30%;
+    height: 300px;
+}
+.cartCheckoutBtn{
+    background-color: #0654ba;
+    color: white;
+    border: none;
+    width: 90%;
+    height: 50px;
+    margin:5%;
+    font-size: large;
+    border-radius: 5px;
+}
+.cartSubtotalTable{
+    margin: auto;
+    font-size: 20px;
+    color: grey;
+    line-height: 25px;
+}
+.p{
+    width: 220px;
+    text-align: right;
+    color: black;
+    /* padding-left: 210px; */
+}
+/*========================== left cart items details box====================== */
+.cartBox1{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    /* gap: 2%; */
+}
+.cartSingleItemDetails{
+    border: 1px solid lightgrey;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.cartSingleItemDetailsTable{
+    width: 100%;
+    /* margin: 1%; */
+}
+td{
+    padding: 10px;
+}
+.cartSingleItemPrice{
+    padding-left: 10px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+.c3{
+    width: 100px;
+}
+.img1{
+    max-width:180px;
+    max-height: 200px;
+}
+#clearCart{
+    color:blue;
+    font-style: italic;
+    text-decoration: underline;
+    font-size:20px ;
+}
+#clearCart:hover{
+    cursor:pointer;
+}
