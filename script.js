@@ -60,7 +60,7 @@ async function searchProducts(url) {
 
 function handlePriceSort() {
   var selected = document.getElementById("sortByprice").value;
-  //console.log(Data);
+  console.log(Data);
   Data.forEach(ele=>ele.price = Number(ele.price))
 
   if (selected === "low") {
@@ -107,7 +107,9 @@ function handleNameSort() {
 
 var gridBox = document.querySelector(".grid-box");
 function showProducts() {
+  gridBox.innerHTML ="";
   for (let i = 0; i < Data.length; i++) {
+
     let largeBox = document.createElement("div");
     largeBox.setAttribute("class", "largee-box");
     gridBox.append(largeBox);

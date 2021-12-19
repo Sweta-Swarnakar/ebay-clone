@@ -43,7 +43,7 @@ body {
 }
 .main-container{
     display: flex;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 85%;
     margin: auto;
     justify-content: space-between;
@@ -331,13 +331,13 @@ ul{
 }
 .largee-box{
     margin-left: 10px;
-    border: 1px solid red;
+   
+    
 }
-.textbox{
-    border: 1px solid red;
-}
+
 .image-box>img{
     width: 100%;
+    position: fixed;
    
 }
 .sort{
