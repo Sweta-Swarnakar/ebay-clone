@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Market Sans',Arial,sans-serif;
+}
+.container{
+    display: flex;
+    border: 1px solid red;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 100px;
+}
+.electronic{
+    border: 1px solid blue;
+    padding: 5px;
+    min-width: 25%;
+    
+}
+.electronic>h1{
+    color: rgb(17,24,32);
+    font-weight: 300;
+   text-align: center;
+}
