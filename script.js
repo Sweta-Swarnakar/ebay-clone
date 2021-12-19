@@ -48,7 +48,7 @@ searchProducts(API_URL);
 
 async function searchProducts(url) {
   try {
-    // api_key="861f5558aa5ac7cb419d45c40f0d4787"
+
     let response = await fetch(url);
      Data = await response.json();
     console.log(Data);
@@ -94,14 +94,14 @@ function handleNameSort() {
 }
 //var output = product.filter(searchByName);
 
-var search = document.getElementById("search"); //add id of search-bar
-search.addEventListener("input", searchByName);
-function searchByName(el) {
-  var searchProd = Data.filter(function (item) {
-    return item.type.includes(search.value);
-  });
-  showProducts(searchProd);
-}
+// var search = document.getElementById("search"); //add id of search-bar
+// search.addEventListener("input", searchByName);
+// function searchByName(el) {
+//   var searchProd = Data.filter(function (item) {
+//     return item.title.includes(search.value);
+//   });
+//   showProducts(searchProd);
+// }
 
 //showProducts(Data);
 
