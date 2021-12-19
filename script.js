@@ -120,7 +120,7 @@ function showProducts() {
 
     var img = document.createElement("img");
     img.setAttribute("src", Data[i].imageUrl);
-    largeBox.append(img);
+    imageBox.append(img);
 
     let textBox = document.createElement("div");
     textBox.setAttribute("class", "textbox");
