@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7d41c29fcc.js" crossorigin="anonymous"></script>
+    <title>home page</title>
+
+    <!-- <link rel="stylesheet" href="./styles/nav.css"> -->
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <!-- <link rel="stylesheet" href="./styles/footer.css"> -->
+    
+
+</head>
+
+<body>
+       <div id="container"></div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://i.ebayimg.com/images/g/F6QAAOSwQcJfIpcl/s-l1600.webp" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://i.ebayimg.com/images/g/ZNwAAOSwcuJfIpcl/s-l1600.webp" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+
+    <div id="footer">
+        <div id="Main">
+            <div>
+                <h3><a href="#">Buy</a></h3>
+                <p><a href="">Registration</a></p>
+                <p><a href="">eBay Money Back Guarantee</a></p>
+                <p><a href="">Bidding & buying help</a></p>
+                <p><a href="">Stores</a></p>
+            </div>
+            <div>
+                <h3><a href="#">Sell</a></h3>
+                <p><a href="">Start selling</a></p>
+                <p><a href="">Learn to sell</a></p>
+                <p><a href="">Affiliates</a></p>
+                <h3><a href="#">Tools & apps</a></h3>
+                <p><a href="">Developers</a></p>
+                <p><a href="">Security center</a></p>
+                <p><a href="">Site map</a></p>
+            </div>
+            <div>
+                <h3><a href="#">Stay connected</a></h3>
+                <p><a href="">eBay's Blogs</a></p>
+
+                <div id="bottomMargin"><i class="fab fa-facebook-square"><span><a class="font13" href="">
+                                Facebook</a></span></i> </div>
+                <div><i class="fab fa-twitter-square"><span><a class="font13" href=""> Twitter</a></span></i></div>
+            </div>
+            <div>
+                <h3><a href="#">About eBay</a></h3>
+                <p><a href="">Company info</a></p>
+                <p><a href="">News</a></p>
+                <p><a href="">Investors</a></p>
+                <p><a href="">Careers</a></p>
+                <p><a href="">Government relations</a></p>
+                <p><a href="">Advertise with us</a></p>
+                <p><a href="">Policies</a></p>
+                <p><a href="">Verified Rights Owner (VeRO) Program</a></p>
+            </div>
+            <div>
+                <h3><a href="#">Help & Contact</a></h3>
+                <p><a href="">Seller Information Center</a></p>
+                <p><a href="">Contact us</a></p>
+                <h3><a href="#">Community</a></h3>
+                <p><a href="">Announcements</a></p>
+                <p><a href="">Discussion boards</a></p>
+                <p><a href="">eBay Giving Works</a></p>
+                <h3><a href="#">eBay Sites</a></h3>
+                <div id="country">
+                    <div class="SetCenter">
+                        <img width="25px" src="https://cdn-icons-png.flaticon.com/512/330/330459.png" alt="">
+                    </div>
+                    <div class="SetCenter">
+                        <p><a id="us" href=""> United States</a><span id="arrow">&#11206;</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>Copyright � 1995-2021 eBay Inc. All Rights Reserved. <span class="Decoration"><a
+                        href="">Accessibility</a></span>, <span class="decoration"><a href="">User Agreement</a></span>,
+                <span class="Decoration"><a href="">Privacy</a></span>, <span class="Decoration"><a
+                        href="">Cookies</a></span>, <span class="Decoration"><a href="">Do not sell my personal
+                        information</a></span> and <span class="Decoration"><a href="">AdChoice </a></span><i
+                    class="fas fa-power-off"></i></p>
+        </div>
+        <div id="norton">
+            <img width="85px" src="https://www.servertastic.com/wp-content/uploads/Norton_by-DigiCert_177x98.png" alt="">
+        </div>
+    </div>
+</body>
+
+
+<script>
+    var slideIndex = 1;
+    // showSlides(slideIndex);
+setInterval(showSlides(slideIndex),1000)
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+<script src="https://kit.fontawesome.com/7d41c29fcc.js" crossorigin="anonymous"></script>
+</html>
+
+<script type="module">
+    import navbar from "./components/nav.js"
+    let container = document.getElementById("container");
+    container.innerHTML = navbar();
+</script>
