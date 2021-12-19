@@ -1,0 +1,140 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "iPhone 11 256GB",
+      "price": "54400",
+      "color": "Black",
+      "description": "As part of our efforts to reach our environmental goals, iPhone 11 does not include a power adapter or EarPods.",
+      "date": "",
+      "types": {
+        "category": "electronics",
+        "subCategory": "mobile"
+      },
+      "imageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-select-2019-family_GEO_EMEA?wid=441&hei=529&fmt=jpeg&qlt=95&.v=1567022219953",
+      "rating": {
+        "rate": "9.8",
+        "count": "9955568"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Apple iPhone 13 (256GB) - Starlight",
+      "price": "89999",
+      "color": "white",
+      "description": "5 cm (6.1-inch) Super Retina XDR display Cinematic mode adds shallow depth of field and shifts focus automatically in your videos",
+      "date": "2021-09-08",
+      "types": {
+        "category": "electronics",
+        "subCategory": "mobile"
+      },
+      "imageUrl": "https://m.media-amazon.com/images/I/61NTwRtdzfL._SL1500_.jpg",
+      "rating": {
+        "rate": "8.8",
+        "count": "895555"
+      }
+    },
+    {
+      "id": "4",
+      "title": "OnePlus 9 Pro 5G (Morning Mist, 12GB RAM, 256GB Storage)",
+      "price": "69999",
+      "color": "Morning Mist",
+      "description": "Rear Quad Camera Co-Developed by Hasselblad, 48 MP Main camera, 50 MP Ultra Wide Angle Camera with Sensor size of 1/1.56''",
+      "date": "2021-11-06",
+      "types": {
+        "category": "electronics",
+        "subCategory": "mobile"
+      },
+      "imageUrl": "https://m.media-amazon.com/images/I/61LvUvbZGlL._SL1500_.jpg",
+      "rating": {
+        "rate": "6.5",
+        "count": "98551"
+      }
+    },
+    {
+      "id": "5",
+      "title": "boAt Rockerz 450 Bluetooth Wireless On Ear Headphone with Mic (Luscious Black)",
+      "price": "899",
+      "color": "black",
+      "description": "Its 40mm dynamic drivers help pump out immersive HD audio all day long It provides a massive battery backup of upto 15 hours",
+      "date": "2021-06-02",
+      "types": {
+        "category": "electronics",
+        "subCategory": "head phones"
+      },
+      "imageUrl": "https://m.media-amazon.com/images/I/51xxA+6E+xL._SL1500_.jpg",
+      "rating": {
+        "rate": "4.5",
+        "count": "320"
+      }
+    },
+    {
+      "id": "7",
+      "title": "boAt Rockerz 450 Bluetooth Wireless On Ear Headphone with Mic (Luscious Black)",
+      "price": "899",
+      "color": "black",
+      "description": "Its 40mm dynamic drivers help pump out immersive HD audio all day long It provides a massive battery backup of upto 15 hours for a superior playback time.",
+      "date": "2021-06-02",
+      "types": {
+        "category": "electronics",
+        "subCategory": "head phones"
+      },
+      "imageUrl": "https://m.media-amazon.com/images/I/51xxA+6E+xL._SL1500_.jpg",
+      "rating": {
+        "rate": "4.5",
+        "count": "320"
+      }
+    },
+    {
+      "id": "6",
+      "title": "Leaf Bass Wireless Bluetooth Headphones",
+      "price": "1999",
+      "color": "black",
+      "description": "LEAF BASS Wireless Bluetooth Headphones, boasts of powerful 40mm drivers for HD sound and our Deep Bass technology lets you enjoy your favourite songs with better clarity.",
+      "date": "2021-10-26",
+      "types": {
+        "category": "electronics",
+        "subCategory": "head phones"
+      },
+      "imageUrl": "https://m.media-amazon.com/images/I/71SJuaMyLDL._SL1500_.jpg",
+      "rating": {
+        "rate": "3.4",
+        "count": "120"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Allen Solly Men's Regular Fit Polo",
+      "price": "1999",
+      "color": "Light Green",
+      "description": "Material: Cotton Pattern: Plain half sleeve machine wash",
+      "date": "2021-12-11",
+      "types": {
+        "category": "woollens",
+        "subCategory": "t shirts"
+      },
+      "imageUrl": "https://m.media-amazon.com/images/I/81RcNGzlIhL._UL1500_.jpg",
+      "rating": {
+        "rate": "5.9",
+        "count": "905"
+      }
+    },
+    {
+      "id": "9",
+      "title": "U.S. POLO ASSN. Men's Solid Regular Fit Polo",
+      "price": "1389",
+      "color": "Apricot",
+      "description": "Care Instructions: Machine Wash Fit Type: Regular Tshirt Apricot Orange Mens Us Polo Ass. Closure Type: Pull On; Collar Style: Classic Collar",
+      "date": "2021-12-04",
+      "types": {
+        "category": "woollens",
+        "subCategory": "t shirts"
+      },
+      "imageUrl": "https://m.media-amazon.com/images/I/810ULKaMnCL._UL1500_.jpg",
+      "rating": {
+        "rate": "6.6",
+        "count": "200"
+      }
+    }
+  ]
+}
