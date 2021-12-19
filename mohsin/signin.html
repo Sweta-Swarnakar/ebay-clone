@@ -101,6 +101,11 @@
 
         let data = await res.json();
         console.log(data);
+
+        if(data.error === true) {
+            alert("Invalid Login Credential.  Enter valid username and password");
+        }
+
         let username = document.getElementById("username").value;
         getProfile(username, data.token);
 
