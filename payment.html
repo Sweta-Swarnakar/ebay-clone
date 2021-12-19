@@ -68,10 +68,10 @@
         </div>
 
         <div class="confirmation">
-            <p>Subtotal</p>
-            <p>Shipping</p>
+            <p>Subtotal<span id="paymentSubTotal" class="pto">0</span></p>
+            <p>Shipping<span class="pto">Rs 80</span></p>
             <hr>
-            <h4>Order total</h4>
+            <h4>Order total <span id="paymentTotal" class="pto">0</span></h4>
             <button id="button">Confirm and pay</button>
 
         </div>
@@ -108,7 +108,13 @@
 </html>
 <script>
     document.getElementById("newCard").addEventListener("click", addDetails)
+ var pto1  = document.getElementById('paymentTotal');
+ var pto2  = document.getElementById('paymentSubTotal');
 
+
+ var total12 = JSON.parse(localStorage.getItem('ebayCartTotla'))
+ pto1.textContent=(Number(total12)+80);
+ pto2.textContent=`${total12}`
     
 
     function addDetails()
