@@ -33,7 +33,7 @@
         </div>
         <input type="text" id="username"  placeholder="Enter username">
         <input type="password" id="password"  placeholder="Enter password">
-        <button onclick="login()" id="continue" class="signinBtn setCenter">Continue</button>
+        <a href="index.html"><button onclick="login()" id="continue" class="signinBtn setCenter">Continue</button></a>
          
         <div id="setHr">
             <hr id="hr1"><span id="or">or</span>
@@ -103,7 +103,7 @@
         console.log(data);
     
         window.alert("log in sucessful!")
-        Window.location.href = "index.html";
+        //Window.location.href = "index.html";
 
         let username = document.getElementById("username").value;
         getProfile(username, data.token);
