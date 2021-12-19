@@ -5,7 +5,7 @@
     for(let s=0;s<cartItems.length;s++){
         sum+= Number(cartItems[s].price);
     }
-    console.log(sum);
+//     console.log(sum);
     var cartCount = document.querySelector('.cartItemCount');
     cartCount.textContent=cartItems.length;
     var cartCount1 = document.querySelector('.cartItemCount2');
