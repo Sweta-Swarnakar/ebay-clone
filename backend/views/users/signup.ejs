@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2bdb37b8af.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./styles/signUp.css"> -->
+    <link rel="stylesheet" href="/css/users/Signup.css">
+
+    <title>Document</title>
+    
+
+</head>
+<body>
+
+    <div id="top">
+        <div>
+          <a href="/"><img src="https://cdn-icons-png.flaticon.com/512/888/888848.png"></a>  
+        </div>
+
+        <div>
+            <p>Already a member?<a href="users/signin">Sign in</a></p>
+        </div>
+        
+    </div>
+
+    <div id="upperBox">
+        <div class="setCenter"> <i class="fas fa-info-circle"></i></div>
+        <div>
+            To buy and sell on <span><a class="underLine" href="">www.ebay.com</a></span> or other eBay sites
+            internationally, existing users can login using
+            their credentials or new users can register an eBay account on ebay.in. Kindly note you can no
+            longer
+            buy or sell on eBay.in.
+        </div>
+    </div>
+    <div id="main">
+
+        <h1>Create Account</h1>
+        <div id="checks">
+            <div>
+                <input type="checkbox" class="checkbox-round" id="personal" onclick="personalAcc()"><span>Personal account </span>
+            </div>
+
+            <div>
+                <input type="checkbox" class="checkbox-round" id="bussiness" onclick="bussinessAcc()"><span>Bussiness account</span><i class="fas fa-exclamation-circle"></i>
+
+
+            </div>
+
+
+        </div>
+
+        <div id="container"></div>
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    var container = document.getElementById("container")
+
+    window.addEventListener('load', (event) => {
+        
+      personalAcc();
+    });
+
+    function personalAcc()
+    {
+        document.getElementById("bussiness").style.backgroundColor = "white";
+        document.getElementById("personal").style.backgroundColor = "#439EE3";
+        
+        container.innerHTML = null;
+        let mainDiv = document.createElement("div")
+        
+        let fstName = document.createElement("input");
+        fstName.setAttribute("class", "smallInput");
+        fstName.placeholder = "Name";
+        fstName.setAttribute("id", "fName");
+        
+       
+        let lstName = document.createElement("input");
+        lstName.setAttribute("class", "smallInput");
+        lstName.placeholder = "email";
+        lstName.setAttribute("id", "lName");
+
+        let email = document.createElement("input")
+        email.setAttribute("class", "longInput");
+        email.placeholder = "username";
+        email.setAttribute("id", "email");
+
+        
+        let Mobile = document.createElement("input")
+        Mobile.setAttribute("class", "longInput");
+        Mobile.placeholder = "Mobile";
+        Mobile.setAttribute("id", "mobile");
+        
+        
+        let passDiv = document.createElement("div")
+        let password = document.createElement("input")
+    
+        password.setAttribute("class", "longInput");
+        password.setAttribute("id", "pass");
+        password.setAttribute("type", "password")
+        password.placeholder = "Password";
+
+        let toggle = document.createElement("input")
+        let passMsg = document.createElement("span");
+        passMsg.innerHTML = "Show"
+        toggle.setAttribute("type", "checkBox");
+        toggle.setAttribute("id", "toggle")
+        toggle.onclick = function()
+        {
+            if (password.type === "password") {
+                   password.type = "text";
+           }
+            else 
+            {
+                 password.type = "password";
+            }
+        };
+
+        passDiv.append(password, toggle, passMsg);
+
+
+        let p = document.createElement("p")
+
+        p.textContent = "By clicking Register, you agree that you have read and accepted";
+        colorText = document.createElement("span")
+        colorText.innerHTML = " our User Agreement. User Privacy Notice. Rules and Policies"
+        colorText.style.color = "blue"
+
+        let btn = document.createElement("button");
+
+        btn.innerHTML = "Register" 
+
+        btn.addEventListener("click", async function Register(){
+
+            let signup_data = {
+                name : document.getElementById("fName").value,
+
+                email : document.getElementById("lName").value,
+
+                password : document.getElementById("pass").value,
+
+                username: document.getElementById("email").value,
+
+                mobile: document.getElementById("mobile").value,
+
+                description: "Description",
+                
+            }
+
+            signup_data = JSON.stringify(signup_data);
+            console.log(signup_data);
+
+            let api_url = `https://masai-api-mocker.herokuapp.com/auth/register`;
+            
+            let res = await fetch(api_url, {
+                method:"POST", 
+    
+                body: signup_data,
+
+                headers: {
+                    "Content-Type" : "application/json",
+                },
+            });
+    
+            let data = await res.json();
+            console.log(data);
+
+            alert("Signup is successful!  Do you want to Login ?" );
+            window.location.href='signin.html';
+            
+        });
+
+
+
+        mainDiv.append(fstName, lstName, email, Mobile, passDiv, p, colorText, btn);
+        container.append(mainDiv);
+
+    }
+
+    
+    function bussinessAcc()
+    {
+        document.getElementById("personal").style.backgroundColor = "white";
+        document.getElementById("bussiness").style.backgroundColor = "#439EE3";
+        container.innerHTML = null;
+
+        let mainDiv = document.createElement("div")
+        let bussinessName = document.createElement("input");
+        bussinessName.setAttribute("class", "longInput");
+        bussinessName.placeholder = "Bussiness name";
+
+        let bussinessEmail = document.createElement("input");
+        bussinessEmail.setAttribute("class", "longInput");
+        bussinessEmail.placeholder = "bussiness email";
+
+        let passDiv = document.createElement("div")
+        let password = document.createElement("input")
+    
+        password.setAttribute("class", "longInput");
+        password.setAttribute("id", "pass");
+        password.setAttribute("type", "password")
+        password.placeholder = "Password";
+
+        let toggle = document.createElement("input")
+        let passMsg = document.createElement("span");
+        passMsg.innerHTML = "Show"
+        toggle.setAttribute("type", "checkBox");
+        toggle.setAttribute("id", "toggle")
+        toggle.onclick = function()
+        {
+            if (password.type === "password") {
+                   password.type = "text";
+           }
+            else 
+            {
+                 password.type = "password";
+            }
+        };
+
+        passDiv.append(password, toggle, passMsg);
+        
+        let location = document.createElement("input")
+        location.setAttribute("class", "longInput");
+        location.placeholder = "Bussiness location";
+        
+        let p1 = document.createElement("p")
+        p1.textContent = "if you dont't have a legal bussiness, enter country of residence."
+
+        let check = document.createElement("input")
+        check.setAttribute("type", "checkbox")
+        
+        let span = document.createElement("span")
+        span.textContent = "I only want to buy on ebay. i dont't want to sell."
+
+        let p = document.createElement("p")
+
+        p.textContent = "By creating an account, you agree that you have read and accepted our User Agreement.User Privacy Notice. Rules and Policies";
+        
+
+        let btn = document.createElement("button")
+         btn.innerHTML = "Register" 
+
+         // btn.addEventListener("click", register)
+        // {
+        //     //write a func and and pass values...
+        // }
+
+        mainDiv.append(bussinessName, bussinessEmail, passDiv, location, p1, check, span, p, btn)
+        container.append(mainDiv);
+
+
+    }
+
+    
+    // api link : https://masai-api-mocker.herokuapp.com
+    // register link : https://masai-api-mocker.herokuapp.com/auth/resgister
+
+    /*
+    async function Register(){
+        //1. get all the input values 
+        //2. store it in an object variable
+        //3. convert the object to Json
+        //4. send data to server(fetch)
+        let signup_data = {
+            fName : document.getElementById("fName").value,
+            lName : document.getElementById("lName").value,
+            email : document.getElementById("email").value,
+            password : document.getElementById("pass").value,
+            username: "",
+            mobile: "",
+            description: "",
+        }
+        signup_data = JSON.stringify(signup_data);
+        console.log(signup_data);
+        
+        let api = `https://masai-api-mocker.herokuapp.com/auth/register`;
+        
+        let res = await fetch(api, {
+            method:"POST", 
+            body: signup_data,
+            // more extra information about my request
+            headers: {
+                "Content-Type" : "application/json",
+            },
+        });
+        let data = await res.json();
+        console.log(data);
+    } */
+
+
+</script>

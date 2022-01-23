@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/users/index.css" />
+    <title>My Application</title>
+  </head>
+  <body>
+    <h1>Users List</h1>
+    <div class="space-between">
+      <h3>Users List</h3>
+      <h3><a href="/users/new">Create new Task</a></h3>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Update</th>
+          <th>Delete</th>
+          <th>Button</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% items.forEach(user => { %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.age %></td>
+          <td>
+            <a href="/users/<%= user._id %>/edit"
+              >Update <%= user.first_name %></a
+            >
+          </td>
+          <td>
+            <a href="/users/<%= user._id %>/delete"
+              >Delete <%= user.first_name %></a
+            >
+          </td>
+          <td>
+            <button
+              type="button"
+              onclick="showUser('<%= JSON.stringify(user) %>')"
+            >
+              Click Me
+            </button>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <button id="testing"></button>
+    <script src="/js/users/index.js"></script>
+    <script>
+      changeText();
+    </script>
+  </body>
+</html>

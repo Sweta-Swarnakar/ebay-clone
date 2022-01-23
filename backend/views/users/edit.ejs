@@ -1,0 +1,44 @@
+<%- include("_header", {title: "Edit Users", cssLink: "/css/users/edit.css"}) %>
+  <body class="background">
+    <h1>Edit User</h1>
+    <!--- /users/:id -->
+    <form
+      action="/users/<%= user._id %>"
+      method="post"
+      onsubmit="updateSubmitHandler"
+    >
+      <div>
+        <input type="hidden" name="_method" value="PATCH">
+        <label for="first_name">First Name</label>
+        <input
+          type="text"
+          value="<%= user.first_name %>"
+          name="first_name"
+          id="first_name"
+        />
+      </div>
+      <div>
+        <label for="last_name">Last Name</label>
+        <input
+          type="text"
+          value="<%= user.last_name %>"
+          name="last_name"
+          id="last_name"
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" value="<%= user.email %>" name="email" id="email" />
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="number" value="<%= user.age %>" name="age" id="age" />
+      </div>
+      <div>
+        <input type="submit" value="Submit Button" name="submit" />
+      </div>
+    </form>
+    <button id="testingagain">Test</button>
+    <script src="/js/users/index.js"></script>
+  </body>
+</html>
