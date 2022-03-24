@@ -2,6 +2,10 @@
 
 eBay is an American multinational e-commerce corporation based in San Jose, California, that facilitates consumer-to-consumer and business-to-consumer sales through its website. eBay is a multibillion-dollar business with operations in about 32 countries, as of 2019.
 
+# Home Page
+<img src="https://raw.githubusercontent.com/shahnawaz8/shahnawaz8/master/Screenshot%20(89).png" alt="Shop.com"/>
+
+
 ### Technologies we used
 
 # Backend
