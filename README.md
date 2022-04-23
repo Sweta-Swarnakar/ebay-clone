@@ -32,7 +32,12 @@ Checkout - Credit/Debit card payment option.
 ## Run Locally
 
 Clone the project
+
 https://github.com/Sweta-Swarnakar/ebay-clone
+
+See the Project
+
+https://fw13-mohd-shahnawaz.netlify.app/
 
 Go to the project directory
 
