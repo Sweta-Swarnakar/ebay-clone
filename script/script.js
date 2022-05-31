@@ -179,7 +179,7 @@ function showProducts() {
 
 // By search in navbar by product name or color name
 
-const SEARCH_API ='http://127.0.0.1:5000/api/products/'
+const SEARCH_API ='https://my-json-server-masai.herokuapp.com/ebay_products'
 
 let search_div = document.getElementById("grid-item"); 
 let btn = document.querySelector('#btn-search');
